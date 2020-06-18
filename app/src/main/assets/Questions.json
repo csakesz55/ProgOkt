@@ -1,0 +1,82 @@
+{
+    "questions":
+    [
+        {
+            "id" :  "1",
+            "grade" : "5",
+            "className" : "Matematika",
+            "questionText" : "Mennyi 4 * 4?",
+            "option1" : "44",
+            "option2" : "8",
+            "option3" : "16",
+            "option4" : "32",
+            "answer" : "16"
+        },
+        {
+            "id" :  "2",
+            "grade" : "6",
+            "className" : "Informatika",
+            "questionText" : "Mennyi 2 a négyzeten?",
+            "option1" : "4",
+            "option2" : "8",
+            "option3" : "16",
+            "option4" : "32",
+            "answer" : "4"
+        },
+        {
+            "id" :  "3",
+            "grade" : "9",
+            "className" : "Fizika",
+            "questionText" : "Hány ml 1 liter?",
+            "option1" : "44",
+            "option2" : "1000",
+            "option3" : "16",
+            "option4" : "32",
+            "answer" : "1000"
+        },
+        {
+            "id" :  "4",
+            "grade" : "11",
+            "className" : "Földrajz",
+            "questionText" : "Hány km-re van Budapesttől a 44-es kilométerkő?",
+            "option1" : "44",
+            "option2" : "8",
+            "option3" : "16",
+            "option4" : "32",
+            "answer" : "44"
+        },
+        {
+            "id" :  "5",
+            "grade" : "5",
+            "className" : "Matematika",
+            "questionText" : "Mennyi 4 * 3?",
+            "option1" : "44",
+            "option2" : "8",
+            "option3" : "12",
+            "option4" : "32",
+            "answer" : "12"
+        },
+        {
+            "id" :  "6",
+            "grade" : "5",
+            "className" : "Matematika",
+            "questionText" : "Mennyi 7 * 7?",
+            "option1" : "49",
+            "option2" : "8",
+            "option3" : "16",
+            "option4" : "32",
+            "answer" : "49"
+        },
+        {
+            "id" :  "7",
+            "grade" : "5",
+            "className" : "Matematika",
+            "questionText" : "Mennyi 4 + 4?",
+            "option1" : "44",
+            "option2" : "8",
+            "option3" : "16",
+            "option4" : "32",
+            "answer" : "8"
+        }
+    ]
+}
