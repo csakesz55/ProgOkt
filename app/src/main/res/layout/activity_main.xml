@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#838383"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -12,7 +12,7 @@
         android:layout_width="160dp"
         android:layout_height="250dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/card_border"
+        android:background="@drawable/card_border_rounded_orange"
         android:minWidth="150dp"
         android:minHeight="150dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -35,42 +35,49 @@
                     android:id="@+id/classRadioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="Fizika" />
 
                 <RadioButton
                     android:id="@+id/classRadioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="Földrajz" />
 
                 <RadioButton
                     android:id="@+id/classRadioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="Informatika" />
 
                 <RadioButton
                     android:id="@+id/classRadioButton4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="Irodalom" />
 
                 <RadioButton
                     android:id="@+id/classRadioButton5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="Kémia" />
 
                 <RadioButton
                     android:id="@+id/classRadioButton6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="Matematika" />
 
                 <RadioButton
                     android:id="@+id/classRadioButton7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="#F4F4F4"
                     android:text="RadioButton" />
             </RadioGroup>
         </LinearLayout>
@@ -81,7 +88,7 @@
         android:layout_width="160dp"
         android:layout_height="250dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/card_border"
+        android:background="@drawable/card_border_rounded_orange"
         android:minWidth="150dp"
         android:minHeight="150dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -108,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="5. osztály" />
 
                 <RadioButton
@@ -116,6 +124,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="6. osztály" />
 
                 <RadioButton
@@ -124,6 +133,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="7. osztály" />
 
                 <RadioButton
@@ -132,6 +142,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="8. osztály" />
 
                 <RadioButton
@@ -140,6 +151,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="9. osztály" />
 
                 <RadioButton
@@ -148,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="10. osztály" />
 
                 <RadioButton
@@ -156,6 +169,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right|center_vertical"
                     android:layoutDirection="rtl"
+                    android:textColor="#F4F4F4"
                     android:text="11. osztály" />
             </RadioGroup>
         </LinearLayout>
@@ -184,22 +198,22 @@
                     android:id="@+id/questionNumberRadioButton1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="10 kérdés"/>
+                    android:text="10 kérdés"
+                    android:textColor="#FFFFFF" />
 
                 <RadioButton
                     android:id="@+id/questionNumberRadioButton2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="30 kérdés"/>
+                    android:text="30 kérdés"
+                    android:textColor="#FFFFFF" />
 
                 <RadioButton
                     android:id="@+id/questionNumberRadioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFFFFF"
-                    android:text="50 kérdés"/>
+                    android:text="50 kérdés"
+                    android:textColor="#FFFFFF" />
             </RadioGroup>
         </LinearLayout>
     </ScrollView>
@@ -222,7 +236,7 @@
         android:id="@+id/startTestButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:background="#00FFFFFF"
         android:src="@drawable/start_button"
         app:layout_constraintEnd_toEndOf="parent"

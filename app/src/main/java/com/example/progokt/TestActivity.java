@@ -3,11 +3,14 @@ package com.example.progokt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -15,14 +18,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 public class TestActivity extends AppCompatActivity {
     ArrayList<Integer> usedQuestions = new ArrayList<>();
     Question question = new Question();
-    int corretAnswers = 0;
+    int correctAnswers = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class TestActivity extends AppCompatActivity {
 
         final int grade = Integer.parseInt(gradeString);
 
+        final ImageView feedbackImageView = findViewById(R.id.feedbackImageView);
         TextView classTextView = findViewById(R.id.classTextView);
         final TextView questionTextView = findViewById(R.id.questionTextView);
         final Button answerButton1 = findViewById(R.id.answerButton1);
@@ -65,18 +67,34 @@ public class TestActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if (button.getText().toString().equals(question.getAnswer())){
-                        Toast.makeText(TestActivity.this, "Helyes!", Toast.LENGTH_SHORT).show();
-                        corretAnswers++;
+                        feedbackImageView.setImageDrawable(getDrawable(R.drawable.green_tick));
+                        Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
+                        feedbackImageView.startAnimation(animFadeOut);
+                        feedbackImageView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                feedbackImageView.setImageResource(0);
+                            }
+                        },1000);
+                        correctAnswers++;
                         question = getQuestion(className, grade, questionArrayList);
                         if (question.getId() == -1) {
                             Intent myIntent = new Intent(TestActivity.this, EndActivity.class);
-                            myIntent.putExtra("correctAnswers", corretAnswers);
+                            myIntent.putExtra("correctAnswers", correctAnswers);
                             TestActivity.this.startActivity(myIntent);
                         } else {
                             setQuestion(question, questionTextView, answerButton1, answerButton2, answerButton3, answerButton4);
                         }
                     } else {
-                        Toast.makeText(TestActivity.this, "Rossz!", Toast.LENGTH_SHORT).show();
+                        feedbackImageView.setImageDrawable(getDrawable(R.drawable.red_cross));
+                        Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
+                        feedbackImageView.startAnimation(animFadeOut);
+                        feedbackImageView.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                feedbackImageView.setImageResource(0);
+                            }
+                        },1000);
                     }
                 }
             });

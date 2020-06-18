@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/card_border"
+    android:background="@drawable/card_border_trans_orange"
     tools:context=".TestActivity">
 
     <TextView
@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Itt a kérdés helye!"
+        android:textColor="#F4F4F4"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Ez a tárgynév helye!"
+        android:textColor="#F4F4F4"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -110,5 +112,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.92" />
+
+    <ImageView
+        android:id="@+id/feedbackImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
