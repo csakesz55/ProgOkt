@@ -1,15 +1,23 @@
 package com.example.progokt;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Context;
 import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -68,14 +76,7 @@ public class TestActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     if (button.getText().toString().equals(question.getAnswer())){
                         feedbackImageView.setImageDrawable(getDrawable(R.drawable.green_tick));
-                        Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
-                        feedbackImageView.startAnimation(animFadeOut);
-                        feedbackImageView.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                feedbackImageView.setImageResource(0);
-                            }
-                        },1000);
+                        imageAnimation(feedbackImageView);
                         correctAnswers++;
                         question = getQuestion(className, grade, questionArrayList);
                         if (question.getId() == -1) {
@@ -86,15 +87,7 @@ public class TestActivity extends AppCompatActivity {
                             setQuestion(question, questionTextView, answerButton1, answerButton2, answerButton3, answerButton4);
                         }
                     } else {
-                        feedbackImageView.setImageDrawable(getDrawable(R.drawable.red_cross));
-                        Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
-                        feedbackImageView.startAnimation(animFadeOut);
-                        feedbackImageView.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                feedbackImageView.setImageResource(0);
-                            }
-                        },1000);
+                        showPopup();
                     }
                 }
             });
@@ -145,5 +138,23 @@ public class TestActivity extends AppCompatActivity {
         answerButton2.setText(question.option2);
         answerButton3.setText(question.option3);
         answerButton4.setText(question.option4);
+    }
+
+    private void imageAnimation(final ImageView imageView){
+        Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_out);
+        imageView.startAnimation(animFadeOut);
+        imageView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                imageView.setImageResource(0);
+            }
+        },1000);
+    }
+
+    public void showPopup(){
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        final PopupWindow pw = new PopupWindow(inflater.inflate(R.layout.help_layout, null, false), 900, 900, true);
+        pw.setAnimationStyle(R.style.AnimationPopup);
+        pw.showAtLocation(findViewById(R.id.testActivityLayout), Gravity.CENTER, 0, 0);
     }
 }

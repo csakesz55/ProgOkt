@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/card_border_trans_orange"
+    android:id="@+id/testActivityLayout"
     tools:context=".TestActivity">
 
     <TextView
@@ -122,5 +123,14 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="@+id/guideline6" />
+
+    <View
+        android:id="@+id/helpView"
+        android:layout_width="349dp"
+        android:layout_height="603dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
