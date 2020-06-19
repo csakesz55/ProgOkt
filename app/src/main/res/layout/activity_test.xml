@@ -51,9 +51,11 @@
 
     <Button
         android:id="@+id/answerButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/button_background_black"
+        android:textColor="#F4F4F4"
         android:maxWidth="150dp"
         android:text="Az első válasz helye!"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -62,10 +64,12 @@
 
     <Button
         android:id="@+id/answerButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="10dp"
         android:maxWidth="150dp"
+        android:background="@drawable/button_background_black"
+        android:textColor="#F4F4F4"
         android:text="A második válasz helye!"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
@@ -73,10 +77,12 @@
 
     <Button
         android:id="@+id/answerButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:maxWidth="150dp"
+        android:background="@drawable/button_background_black"
+        android:textColor="#F4F4F4"
         android:text="A harmadik válasz helye!"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
@@ -84,10 +90,12 @@
 
     <Button
         android:id="@+id/answerButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:maxWidth="150dp"
+        android:background="@drawable/button_background_black"
+        android:textColor="#F4F4F4"
         android:text="A negyedik válasz helye!"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
