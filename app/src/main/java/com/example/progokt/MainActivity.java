@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         final RadioGroup classRadioGroup = findViewById(R.id.classRadioGroup);
         final RadioGroup gradeRadioGroup = findViewById(R.id.gradeRadioGroup);
-        final RadioGroup questionRadioGroup = findViewById(R.id.questionRadioGroup);
+//        final RadioGroup questionRadioGroup = findViewById(R.id.questionRadioGroup);
 
         ImageButton startTestButton = findViewById(R.id.startTestButton);
 
@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = new Intent(MainActivity.this, TestActivity.class);
                 RadioButton selectedClass = (RadioButton) findViewById(classRadioGroup.getCheckedRadioButtonId());
                 RadioButton selectedGrade = (RadioButton) findViewById(gradeRadioGroup.getCheckedRadioButtonId());
-                RadioButton selectedQuestionNumber = (RadioButton) findViewById(questionRadioGroup.getCheckedRadioButtonId());
+//                RadioButton selectedQuestionNumber = (RadioButton) findViewById(questionRadioGroup.getCheckedRadioButtonId());
 
-                myIntent.putExtra("className", selectedClass.getText());
+                myIntent.putExtra("className", selectedClass.getContentDescription());
                 myIntent.putExtra("grade", selectedGrade.getText());
-                myIntent.putExtra("questionNumber", selectedQuestionNumber.getText());
+//                myIntent.putExtra("questionNumber", selectedQuestionNumber.getText());
                 MainActivity.this.startActivity(myIntent);
             }
         });

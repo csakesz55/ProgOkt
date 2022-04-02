@@ -12,28 +12,25 @@
         android:id="@+id/questionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Itt a kérdés helye!"
-        android:textColor="#F4F4F4"
         android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classTextView" />
+        android:textAllCaps="false"
+        android:textColor="#F4F4F4"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/helpView" />
 
     <TextView
         android:id="@+id/classTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:text="Ez a tárgynév helye!"
         android:textColor="#F4F4F4"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline5" />
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -51,55 +48,61 @@
 
     <Button
         android:id="@+id/answerButton1"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/button_background_black"
-        android:textColor="#F4F4F4"
+        android:background="@color/cardview_dark_background"
         android:maxWidth="150dp"
         android:text="Az első válasz helye!"
+        android:textAllCaps="false"
+        android:textColor="#F4F4F4"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
-        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/helpView" />
 
     <Button
         android:id="@+id/answerButton2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cardview_dark_background"
         android:maxWidth="150dp"
-        android:background="@drawable/button_background_black"
-        android:textColor="#F4F4F4"
         android:text="A második válasz helye!"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        android:textAllCaps="false"
+        android:textColor="#F4F4F4"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline3" />
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/answerButton1" />
 
     <Button
         android:id="@+id/answerButton3"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cardview_dark_background"
         android:maxWidth="150dp"
-        android:background="@drawable/button_background_black"
-        android:textColor="#F4F4F4"
         android:text="A harmadik válasz helye!"
-        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        android:textAllCaps="false"
+        android:textColor="#F4F4F4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toBottomOf="@+id/answerButton2" />
 
     <Button
         android:id="@+id/answerButton4"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/cardview_dark_background"
         android:maxWidth="150dp"
-        android:background="@drawable/button_background_black"
-        android:textColor="#F4F4F4"
         android:text="A negyedik válasz helye!"
+        android:textAllCaps="false"
+        android:textColor="#F4F4F4"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/answerButton3" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
@@ -124,13 +127,13 @@
 
     <ImageView
         android:id="@+id/feedbackImageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="70dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        android:layout_width="84dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="@+id/guideline6" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView" />
 
     <View
         android:id="@+id/helpView"

@@ -1,21 +1,18 @@
 package com.example.progokt;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -25,6 +22,7 @@ import com.google.gson.Gson;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -156,5 +154,42 @@ public class TestActivity extends AppCompatActivity {
         final PopupWindow pw = new PopupWindow(inflater.inflate(R.layout.help_layout, null, false), 900, 900, true);
         pw.setAnimationStyle(R.style.AnimationPopup);
         pw.showAtLocation(findViewById(R.id.testActivityLayout), Gravity.CENTER, 0, 0);
+
+        TextView helpTextView = pw.getContentView().findViewById(R.id.helpTextView);
+        ImageView helpImageView = pw.getContentView().findViewById(R.id.helpImageView);
+
+        if (question.getId() == 2){
+            helpTextView.setText("Más néven Arktisznak is nevezzük. Legnagyobb része a Jeges-tengerterületére esik, melyet állandó jégtakaró borít. Ide tartoznak a szárazföldi részek is pl. Izland, Grönland, Alaszka stb.");
+        } else if (question.getId() == 7){
+            helpTextView.setText("https://www.youtube.com/watch?v=aai5tkUiSDA");
+        } else {
+            switch (question.getId()) {
+                case 1:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_1_help));
+                    break;
+                case 3:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_3_help));
+                    break;
+                case 4:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_4_help));
+                    break;
+                case 5:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_5_help));
+                    break;
+                case 6:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_6_help));
+                    break;
+                case 8:
+                case 9:
+                case 10:
+                case 11:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_8_9_10_11_help));
+                    break;
+                case 12:
+                case 13:
+                    helpImageView.setImageDrawable(getDrawable(R.drawable.term_question_12_13_help));
+                    break;
+            }
+        }
     }
 }
