@@ -113,7 +113,8 @@
                     android:layoutDirection="rtl"
                     android:text="5. osztály"
                     android:textColor="#F4F4F4"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:contentDescription="5"/>
 
                 <RadioButton
                     android:id="@+id/gradeRadioButton2"
@@ -124,7 +125,8 @@
                     android:layoutDirection="rtl"
                     android:text="6. osztály"
                     android:textColor="#F4F4F4"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:contentDescription="6"/>
 
                 <RadioButton
                     android:id="@+id/gradeRadioButton3"
@@ -135,7 +137,8 @@
                     android:layoutDirection="rtl"
                     android:text="7. osztály"
                     android:textColor="#F4F4F4"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:contentDescription="7"/>
 
                 <RadioButton
                     android:id="@+id/gradeRadioButton4"
@@ -146,7 +149,8 @@
                     android:layoutDirection="rtl"
                     android:text="8. osztály"
                     android:textColor="#F4F4F4"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"
+                    android:contentDescription="8"/>
 
             </RadioGroup>
         </LinearLayout>

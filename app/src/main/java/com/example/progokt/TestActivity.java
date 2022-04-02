@@ -38,10 +38,7 @@ public class TestActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String className = intent.getStringExtra("className");
-        String gradeString = intent.getStringExtra("grade").substring(0,2);
-        if (gradeString.substring(1,2).equals(".")){
-            gradeString = gradeString.substring(0,1);
-        }
+        String gradeString = intent.getStringExtra("grade");
 
         final int grade = Integer.parseInt(gradeString);
 

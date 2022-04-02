@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 //                RadioButton selectedQuestionNumber = (RadioButton) findViewById(questionRadioGroup.getCheckedRadioButtonId());
 
                 myIntent.putExtra("className", selectedClass.getContentDescription());
-                myIntent.putExtra("grade", selectedGrade.getText());
+                myIntent.putExtra("grade", selectedGrade.getContentDescription());
 //                myIntent.putExtra("questionNumber", selectedQuestionNumber.getText());
                 MainActivity.this.startActivity(myIntent);
             }
