@@ -37,6 +37,8 @@
         android:layout_marginTop="100dp"
         android:textColor="#F4F4F4"
         android:textSize="15sp"
+        android:autoLink="web
+"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helpLayourTextView" />

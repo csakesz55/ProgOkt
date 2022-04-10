@@ -20,7 +20,8 @@ public class EndActivity extends AppCompatActivity {
         int correctAnswers = intent.getIntExtra("correctAnswers", 0);
 
         TextView correctTextView = findViewById(R.id.correctTextView);
-        correctTextView.setText("Helyes válaszok: " + correctAnswers + "!");
+        //correctTextView.setText("Helyes válaszok: " + correctAnswers + "!");
+        correctTextView.setText("Gratulálok, nagyon kitartó voltál!");
 
         ImageButton homeImageButton = findViewById(R.id.homeImageButton);
         homeImageButton.setOnClickListener(new View.OnClickListener() {
